@@ -34,7 +34,7 @@ const Room = sequelize.define('Room', {
   },
 }, {
   // Adding timestamps for easier tracking of creation and updates
-  timestamps: true,
+  timestamps: false,
   tableName: 'Rooms', // Make sure the table name matches the one in the database
 });
 
