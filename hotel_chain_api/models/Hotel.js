@@ -28,7 +28,7 @@ const Hotel = sequelize.define('Hotel', {
   },
 }, {
   // Adding timestamps, which will make queries easier to track
-  timestamps: true,
+  timestamps: false,
   tableName: 'Hotel', // To ensure Sequelize uses the exact table name
 });
 

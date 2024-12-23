@@ -22,7 +22,7 @@ const Guest = sequelize.define('Guest', {
   },
 }, {
   // Adding timestamps for easier tracking of creation and updates
-  timestamps: true,
+  timestamps: false,
   tableName: 'Guest', // Make sure the table name matches the one in the database
 });
 

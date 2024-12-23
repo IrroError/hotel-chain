@@ -1,19 +1,19 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-require('dotenv').config();
-const db = require('./config/db');
-
 const app = express();
+const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
+
+// Load environment variables
+dotenv.config();
 
 // Middleware
-app.use(cors());
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // For parsing application/json
 
-// Test Route
-app.get('/', (req, res) => {
-    res.send('Hotel Chain API is running...');
-});
+// Import routes
+const hotelRoutes = require('./routes/hotelRoutes');
+
+// Use routes
+app.use('/api', hotelRoutes);
 
 // Start Server
 const PORT = process.env.PORT || 5000;

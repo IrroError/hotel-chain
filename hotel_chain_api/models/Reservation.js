@@ -50,7 +50,7 @@ const Reservation = sequelize.define('Reservation', {
   },
 }, {
   // Adding timestamps for easier tracking of creation and updates
-  timestamps: true,
+  timestamps: false,
   tableName: 'Reservation', // Make sure the table name matches the one in the database
 });
 
