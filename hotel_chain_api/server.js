@@ -12,10 +12,12 @@ app.use(bodyParser.json()); // For parsing application/json
 // Import routes
 const hotelRoutes = require('./routes/hotelRoutes');
 const guestRoutes = require('./routes/guestRoutes');
+const roomRoutes = require('./routes/roomRoutes');
 
 // Use routes
 app.use('/api', hotelRoutes);
 app.use('/api', guestRoutes);
+app.use('/api', roomRoutes)
 
 // Start Server
 const PORT = process.env.PORT || 5000;
