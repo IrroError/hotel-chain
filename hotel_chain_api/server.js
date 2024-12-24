@@ -18,8 +18,11 @@ const shiftRoutes = require('./routes/shiftRoutes');
 // const staffRoutes = require('./routes/staffRoutes');
 // const jobAssignmentRoutes = require('./routes/jobAssignmentRoutes');
 
+
 const roomRoutes = require('./routes/roomRoutes');
 const reservationRoutes = require('./routes/reservationRoutes');
+
+
 
 // Use routes
 app.use('/api', hotelRoutes);
@@ -31,6 +34,7 @@ app.use('/api', shiftRoutes);
 // app.use('/api', jobAssignmentRoutes);
 app.use('/api', roomRoutes)
 app.use('/api', reservationRoutes);
+
 
 // Start Server
 const PORT = process.env.PORT || 5000;
