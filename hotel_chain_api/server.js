@@ -21,6 +21,7 @@ const shiftRoutes = require('./routes/shiftRoutes');
 
 const roomRoutes = require('./routes/roomRoutes');
 const reservationRoutes = require('./routes/reservationRoutes');
+const reservationInfoRoutes = require('./routes/reservationInfoRoutes');
 
 
 
@@ -34,6 +35,7 @@ app.use('/api', shiftRoutes);
 // app.use('/api', jobAssignmentRoutes);
 app.use('/api', roomRoutes)
 app.use('/api', reservationRoutes);
+app.use('/api', reservationInfoRoutes);
 
 
 // Start Server
