@@ -13,7 +13,8 @@ app.use(bodyParser.json()); // For parsing application/json
 const hotelRoutes = require('./routes/hotelRoutes');
 const guestRoutes = require('./routes/guestRoutes');
 const roomRoutes = require('./routes/roomRoutes');
-
+const cors = require('cors');
+app.use(cors());
 // Use routes
 app.use('/api', hotelRoutes);
 app.use('/api', guestRoutes);
