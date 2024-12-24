@@ -13,19 +13,23 @@ app.use(bodyParser.json()); // For parsing application/json
 const hotelRoutes = require('./routes/hotelRoutes');
 const guestRoutes = require('./routes/guestRoutes');
 const shiftRoutes = require('./routes/shiftRoutes');
-const hotelRevenueRoutes = require('./routes/hotelRevenueRoutes');
+// const hotelRevenueRoutes = require('./routes/hotelRevenueRoutes');
 // const departmentRoutes = require('./routes/departmentRoutes');  
 // const staffRoutes = require('./routes/staffRoutes');
 // const jobAssignmentRoutes = require('./routes/jobAssignmentRoutes');
+const roomRoutes = require('./routes/roomRoutes');
+
 
 // Use routes
 app.use('/api', hotelRoutes);
 app.use('/api', guestRoutes);
 app.use('/api', shiftRoutes);
-app.use('/api', hotelRevenueRoutes);
+// app.use('/api', hotelRevenueRoutes);
 // app.use('/api', departmentRoutes);
 // app.use('/api', staffRoutes);
 // app.use('/api', jobAssignmentRoutes);
+app.use('/api', roomRoutes)
+
 
 // Start Server
 const PORT = process.env.PORT || 5000;
